@@ -43,7 +43,7 @@ class Bank {
                 timestamps: false
             });
         } catch (error) {
-            console.log(DATABASE_URL);
+            console.log(process.env.DATABASE_URL);
             throw "Erro ao connectar ao banco";
         }
 
