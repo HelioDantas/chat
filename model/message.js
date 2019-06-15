@@ -8,7 +8,7 @@ class Message {
     }
 
     async push(message) {
-        const query = 'insert into message (:author, :message)';
+        const query = "insert into message (author, message) values ( :author, :message )";
         return await this.banco.create(query, message);
     }
 

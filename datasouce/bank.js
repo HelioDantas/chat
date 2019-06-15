@@ -37,7 +37,7 @@ class Bank {
      */
     _connect() {
         try {
-            this._drive = new Sequelize(process.env.DATABASE_URL, {
+            this._drive = new Sequelize('postgres://helio:123@localhost:5432/herois', {
                 quoteIdentifirs: false,
                 logging: false,
                 timestamps: false
@@ -57,11 +57,15 @@ class Bank {
         const ret = await this.isConnected();
         if (!ret) {
             throw {message: 'Banco não conectado', stack: 'linha 65'}
-        }
-        return await this._drive.query(query, {
-            replacements: replacements,
-            raw: false, type: this._drive.QueryTypes.INSERT, native: true
-        });
+        } try {
+           return await this._drive.query(query, {
+               replacements: replacements,
+               raw: false, type: this._drive.QueryTypes.INSERT, native: true
+           });
+       }catch (e) {
+           console.error(e);
+       }
+
     }
 
     /**
