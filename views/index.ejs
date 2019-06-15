@@ -2,6 +2,8 @@
 <html>
 <head>
     <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel='stylesheet' href='/stylesheets/style.css'/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,26 +21,30 @@
 
 </head>
 <body>
+<div class="container">
+    <div class=" d-flex justify-content-center">
+        <div class="inner">
+            <div class="text-title mb-2" role="heading"><strong><h4> Chatqe</h4></strong></div>
+            <form id="submit" class="iner">
+                <div class="form-group col-12">
+                    <label for="exampleFormControlInput1">User</label>
+                    <input type="text" class="form-control" id="user" placeholder="">
+                </div>
+                <div class="form-group col-12">
+                    <div class="messages">
 
-<div class=" d-flex justify-content-center">
-    <form id="submit" class="inner">
-        <div class="form-group col-12">
-            <label for="exampleFormControlInput1">User</label>
-            <input type="text" class="form-control" id="user" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group col-12">
+                    <label for="exampleFormControlTextarea1">Digite sua menssagem</label>
+                    <input class="form-control" id="message" rows="3">
+                </div>
+                <div class="form-group col-12">
+                    <button type="submit" class="btn btn-outline-primary  col-12 ">Enviar</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group col-12">
-            <div class="messages">
-
-            </div>
-        </div>
-        <div class="form-group col-12">
-            <label for="exampleFormControlTextarea1">Digite sua menssagem</label>
-            <input class="form-control" id="message" rows="3">
-        </div>
-        <div class="form-group col-12">
-            <button type="submit" class="btn btn-outline-primary  col-12 ">Enviar</button>
-        </div>
-    </form>
+    </div>
 </div>
 <script>
     const renderMenssage = message => {
@@ -48,15 +54,16 @@
     socket.on('connect', function () {
     });
     socket.on('previossMessage', messages => {
-        messages.map( message => renderMenssage(message));
+        messages.map(message => renderMenssage(message));
     })
     socket.on('retornMensage', data => renderMenssage(data));
-    socket.on('disconnect', function(){});
+    socket.on('disconnect', function () {
+    });
     $("#submit").submit(event => {
         event.preventDefault();
-        const author =  $("#user").val();
-        const message =  $("#message").val();
-        if(author.length && message.length) {
+        const author = $("#user").val();
+        const message = $("#message").val();
+        if (author.length && message.length) {
             $("#message").val('');
             const messageObj = {
                 author,
