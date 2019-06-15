@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "migrate": "node migrate/migrate.js",
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "cross-env URL=http://localhost:3000/ cross-env DATABASE_URL=postgres://helio:123@localhost:5432/herois  node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
+    "cross-env": "^5.2.0",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
