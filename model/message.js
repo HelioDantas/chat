@@ -1,4 +1,5 @@
 const banco = require('../datasouce/bank');
+var xss = require("xss");
 
 class Message {
 

@@ -57,8 +57,7 @@
         messages.map(message => renderMenssage(message));
     })
     socket.on('retornMensage', data => renderMenssage(data));
-    socket.on('disconnect', function () {
-    });
+    socket.on('renderYouMessage',  data => renderMenssage(data));
     $("#submit").submit(event => {
         event.preventDefault();
         const author = $("#user").val();
@@ -69,7 +68,7 @@
                 author,
                 message
             }
-            renderMenssage(messageObj);
+            //renderMenssage(messageObj);
             socket.emit('sendMenssage', messageObj);
         }
     });
