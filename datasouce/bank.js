@@ -37,14 +37,12 @@ class Bank {
      */
     _connect() {
         try {
-            this._drive = new Sequelize('postgres://helio:123@localhost:5432/herois', {
+            this._drive = new Sequelize(DATABASE_URL, {
                 quoteIdentifirs: false,
                 logging: false,
                 timestamps: false
             });
         } catch (error) {
-            console.log(process.env.DATABASE_URL, 'rr');
-            console.error(error);
             throw "Erro ao connectar ao banco";
         }
 

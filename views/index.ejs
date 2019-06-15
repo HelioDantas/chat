@@ -44,7 +44,7 @@
     const renderMenssage = message => {
         $('.messages').append(`<div class="message"><strong>${message.author}</strong>: ${message.message}</div>`)
     }
-    var socket = io('http://localhost:3000');
+    var socket = io(process.env.URL);
     socket.on('connect', function () {
     });
     socket.on('previossMessage', messages => {
