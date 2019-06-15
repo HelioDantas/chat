@@ -4,13 +4,8 @@ const Banck = require('../datasouce/bank');
 const bank = new Banck();
 
 const main = async () => {
- /*   bank.isConnected();
-    bank.read('create sequence message_id_seq;\n' +
-        '\n' +
-        'alter table message alter column id set default nextval(\'public.message_id_seq\');\n' +
-        '\n' +
-        'alter sequence message_id_seq owned by message.id;');
-*/
+   bank.isConnected();
+    bank.read('delete from message where id = 82');
 };
 
 main();
