@@ -47,8 +47,16 @@
     </div>
 </div>
 <script>
+    const mm = $('.messages');
+    const ultimo = () => {
+        const tam = mm.children();
+        const qtdChild = tam.length;
+        mm.scrollTop(20 * qtdChild);
+    }
+
     const renderMenssage = message => {
-        $('.messages').append(`<div class="message"><strong>${message.author}</strong>: ${message.message}</div>`)
+        $('.messages').append(`<div class="message"><strong>${message.author}</strong>: ${message.message}</div>`);
+        ultimo();
     }
     var socket = io("<%= process.env.URL %>");
     socket.on('connect', function () {
@@ -57,7 +65,8 @@
         messages.map(message => renderMenssage(message));
     })
     socket.on('retornMensage', data => renderMenssage(data));
-    socket.on('renderYouMessage',  data => renderMenssage(data));
+    socket.on('renderYouMessage', data => renderMenssage(data));
+
     $("#submit").submit(event => {
         event.preventDefault();
         const author = $("#user").val();
