@@ -37,12 +37,13 @@ class Bank {
      */
     _connect() {
         try {
-            this._drive = new Sequelize(DATABASE_URL, {
+            this._drive = new Sequelize(process.env.DATABASE_URL, {
                 quoteIdentifirs: false,
                 logging: false,
                 timestamps: false
             });
         } catch (error) {
+            console.log()
             throw "Erro ao connectar ao banco";
         }
 
