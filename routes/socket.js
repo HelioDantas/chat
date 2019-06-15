@@ -1,10 +1,14 @@
 const message = require('../model/message');
 var xss = require("xss");
-
+var options = {
+    whiteList: {
+        a: [" href ", " title ", " target "]
+    }
+};
 const limp = message => {
     return {
-        author: xss(message.author),
-        message: xss(message.message)
+        author: xss(message.author, options),
+        message: xss(message.message, options)
     };
 };
 module.exports = async (socket) => {
