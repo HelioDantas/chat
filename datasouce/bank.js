@@ -37,7 +37,7 @@ class Bank {
      */
     _connect() {
         try {
-            this._drive = new Sequelize(process.env.BANCO_CLS_teste_URL, {
+            this._drive = new Sequelize(process.env.DATABASE_URL, {
                 quoteIdentifirs: false,
                 logging: false,
                 timestamps: false
