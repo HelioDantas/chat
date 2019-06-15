@@ -23,10 +23,9 @@ app.set('port', port);
 
 const server = http.createServer(app);
 const io = require('socket.io')(server);
-const messages = [];
 io.on('connection', socket => {
     console.log(`Socket conectado: ${socket.id}`);
-    socketRoute(socket, messages);
+    socketRoute(socket);
 });
 /**
  * Listen on provided port, on all network interfaces.
