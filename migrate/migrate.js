@@ -5,7 +5,7 @@ const bank = new Banck();
 
 const main = async () => {
    bank.isConnected();
-    bank.read('delete from message where id = 82');
+    bank.read('delete from message where id > 126');
 };
 
 main();
