@@ -4,7 +4,7 @@
     <title><%= title %></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='stylesheet' type="text/css" href='/stylesheets/style.css'/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -21,28 +21,41 @@
 
 </head>
 <body>
+<%- include('components/formUser'); -%>
 <div class="container">
-    <div class=" d-flex justify-content-center">
-        <div class="inner">
-            <div class="text-title mb-2" role="heading"><strong><h4> Chatqe</h4></strong></div>
-            <form id="submit" class="iner">
-                <div class="form-group col-12">
+    <div class="">
+        <div class="inner  d-flex flex-column">
+            <div class="user-top" id="user-top">
+            </div>
+            <div class=" d-flex flex-column">
+                <div class="messages p-2 bd-highlight">
+
+                </div>
+                <div class="form-group col-12" style="display: none">
                     <label for="exampleFormControlInput1">User</label>
                     <input type="text" class="form-control" id="user" placeholder="">
                 </div>
-                <div class="form-group col-12">
-                    <div class="messages">
-
+                <form id="submit" class="iner ">
+                    <div class="row digite p-2 bd-highlight" style="margin-top: 1rem;">
+                        <div class="form-group col-10 " style="margin: auto">
+                                <input class="form-control" id="message" rows="3" autofocus
+                                   placeholder="Digite sua menssagem">
+                        </div>
+                        <div style="margin: auto" class="form-group col-2">
+                            <button type="submit" class="btn">
+                            <span data-icon="send" class="">
+                                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                     height="24">
+                                    <path fill="#263238" fill-opacity=".45"
+                                          d="M1.101 21.757L23.8 12.028 1.101 2.3l.011 7.912 13.623 1.816-13.623 1.817-.011 7.912z">
+                                    </path>
+                                </svg>
+                            </span>
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group col-12">
-                    <label for="exampleFormControlTextarea1">Digite sua menssagem</label>
-                    <input class="form-control" id="message" rows="3">
-                </div>
-                <div class="form-group col-12">
-                    <button type="submit" class="btn btn-outline-primary  col-12 ">Enviar</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </div>
