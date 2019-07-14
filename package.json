@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "migrate": "node migrate/migrate.js",
+    "migrate": "node src/migrate/migrate.js",
     "start": "node ./bin/www",
     "dev": "cross-env URL=http://localhost:3000/ cross-env DATABASE_URL=postgres://helio:123@localhost:5432/herois  node ./bin/www"
   },
