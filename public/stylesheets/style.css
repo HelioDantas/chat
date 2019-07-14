@@ -35,12 +35,14 @@ a {
     height: 100%;
     min-height: 100px;
     overflow: auto;
+    overflow-x: hidden;
     background-color: #f0f0f0;
     position: relative;
     box-sizing: border-box;
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
+    word-break: break-word;
 
 }
 
@@ -112,4 +114,16 @@ a {
     -webkit-flex-direction: row;
     flex-direction: row;
     max-width: 100%;
+}
+
+.hora {
+
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.autho {
+
+    color: #00B7FF;
+    font-size: 0.8rem;
 }

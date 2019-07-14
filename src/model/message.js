@@ -1,5 +1,4 @@
 const banco = require('../datasouce/bank');
-var xss = require("xss");
 
 class Message {
 
@@ -9,12 +8,12 @@ class Message {
     }
 
     async push(message) {
-        const query = "insert into message (author, message) values ( :author, :message )";
+        const query = "insert into message (author, message, time) values ( :author, :message, :time)";
         return await this.banco.create(query, message);
     }
 
-    async all(message) {
-        const query = 'select * from message';
+    async all() {
+        const query = 'select substr(time::VARCHAR, 0, 6) hora, * from message;';
         return await this.banco.read(query);
     }
 }

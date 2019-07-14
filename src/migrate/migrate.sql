@@ -11,3 +11,6 @@ create sequence message_id_seq;\n' +
         'alter table message alter column id set default nextval(\'public.message_id_seq\');\n' +
         '\n' +
         'alter sequence message_id_seq owned by message.id;');
+
+
+alter table message add time time default '10:00:50';

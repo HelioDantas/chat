@@ -67,10 +67,10 @@
     }
 
     const renderMenssage = message => {
-        $('.messages').append(`<div class="message"><strong>${message.author}</strong>: ${message.message}</div>`);
+        $('.messages').append(<%- include('components/message'); -%>);
         ultimo();
     }
-    var socket = io("<%= process.env.URL %>");
+    const socket = io("<%= process.env.URL %>");
     socket.on('connect', function () {
     });
     socket.on('previossMessage', messages => {
