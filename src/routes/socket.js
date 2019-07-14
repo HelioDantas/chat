@@ -11,7 +11,7 @@ const limp = message => {
         author: xss(message.author, options),
         message: xss(message.message, options),
         time: data.toLocaleTimeString(),
-        hora: data.toLocaleTimeString().substr(0, 5)
+        hora: data.toLocaleTimeString().substring(0, 5)
     };
 };
 module.exports = async (socket) => {
