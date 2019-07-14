@@ -1,6 +1,6 @@
 # Chatq
 
-###Url do site
+### Url do site
 [chat](https://chatqe.herokuapp.com/)
 
 ## 
@@ -11,7 +11,7 @@ Esse é um exemplo simples de um [chat](https://chatqe.herokuapp.com/) com socke
 
 Ao rodar a api em ambiente de dev siga os passos abaixo:
 
-##USO
+## USO
 
 
 clone com  `https://github.com/HelioDantas/chat.git`
