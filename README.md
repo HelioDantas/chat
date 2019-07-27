@@ -24,7 +24,15 @@ npm run migrate
 npm run dev
 ```
 
+## App
+##### Tela na qual o usuario colocar seu username
+![](https://github.com/HelioDantas/chat/tree/master/public/images/tela.png)
 
+##### Tela de menssagens desktop
+![](https://github.com/HelioDantas/chat/tree/master/public/images/tela_desktop.png)
+
+##### Tela de mensagens mobile
+![](https://github.com/HelioDantas/chat/tree/master/public/images/tela_mobile.png)
 
 
 ## Maintainers
