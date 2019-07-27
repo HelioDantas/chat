@@ -26,13 +26,13 @@ npm run dev
 
 ## App
 ##### Tela na qual o usuario colocar seu username
-![](https://github.com/HelioDantas/chat/blob/master/public/images/tela.PNG)
+![](https://github.com/HelioDantas/chat/blob/master/public/images/usuario_mobile.PNG)
 
-##### Tela de menssagens desktop
+##### Tela de mensagens desktop
 ![](https://github.com/HelioDantas/chat/blob/master/public/images/tela_desktop.PNG)
 
 ##### Tela de mensagens mobile
-![](https://github.com/HelioDantas/chat/blob/master/public/images/usuario_mobile.PNG)
+![](https://github.com/HelioDantas/chat/blob/master/public/images/tela.PNG)
 
 
 ## Maintainers
