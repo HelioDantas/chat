@@ -29,10 +29,10 @@ npm run dev
 ![](https://github.com/HelioDantas/chat/blob/master/public/images/tela.PNG)
 
 ##### Tela de menssagens desktop
-![](https://github.com/HelioDantas/chat/blob/master/public/images/tela.PNG)
+![](https://github.com/HelioDantas/chat/blob/master/public/images/tela_desktop.PNG)
 
 ##### Tela de mensagens mobile
-![](https://github.com/HelioDantas/chat/blob/master/public/images/tela.PNG)
+![](https://github.com/HelioDantas/chat/blob/master/public/images/usuario_mobile.PNG)
 
 
 ## Maintainers
